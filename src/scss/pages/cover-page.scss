@@ -1,0 +1,70 @@
+.cover-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/sfondo.png?quality=75&width=3000&as=webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &__container {
+    height: 40vh;
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    @include respond(phone-land) {
+      height: 50vh;
+      width: 90vw;
+    }
+    @include respond(phone-port) {
+      height: 50vh;
+      width: 90vw;
+    }
+    @include respond(iphone-5) {
+      width: 100vw;
+    }
+  }
+
+  &__title {
+    color: #55596d;
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    text-align: center;
+
+    @include respond(macbook) {
+      font-size: 10rem;
+    }
+    @include respond(tab-port) {
+      font-size: 6rem;
+    }
+    @include respond(phone-land) {
+      font-size: 5rem;
+      line-height: 1.5em;
+      letter-spacing: 2rem;
+    }
+    @include respond(iphone-5) {
+      font-size: 4rem;
+      transform: translateX(7px);
+    }
+  }
+
+  &__icon {
+    width: 18%;
+
+    @include respond(macbook) {
+      width: 30%;
+    }
+    @include respond(tab-port) {
+      width: 50%;
+    }
+    @include respond(phone-land) {
+      width: 30%;
+    }
+  }
+}
